@@ -33,6 +33,22 @@ import Footer from '@/components/footer/Footer.vue'
           </p>
         </RouterLink>
 
+        <RouterLink to="/fonasa"
+          class="block p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md bg-white transition">
+          <h2 class="text-lg font-semibold text-gray-700 mb-1">FONASA</h2>
+          <p class="text-sm text-gray-500">
+            Calcula tus aportes mensuales obligatorios o complementarios.
+          </p>
+        </RouterLink>
+
+        <RouterLink to="/salary-data"
+          class="block p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md bg-white transition">
+          <h2 class="text-lg font-semibold text-gray-700 mb-1">Ver Valores para Cálculos</h2>
+          <p class="text-sm text-gray-500">
+            Consulta los valores y fechas de actualización para los cálculos.
+          </p>
+        </RouterLink>
+
         <!-- Herramienta 3 (Próximamente) -->
         <div class="p-6 rounded-lg border border-gray-200 bg-gray-100 opacity-60 cursor-not-allowed">
           <h2 class="text-lg font-semibold text-gray-700 mb-1">Liquidaciones para Unipersonales</h2>

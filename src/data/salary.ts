@@ -2,6 +2,7 @@
  * BPC value for 2025.
  */
 const BPC = 6576;
+const CPE = 4828;
 
 /**
  * IRPF tax brackets.
@@ -84,6 +85,7 @@ const EXTRA_SOLIDARITY_CONTRIBUTION = ((5 / 4) * BPC) / 12;
 
 export {
     BPC,
+    CPE,
     IRPF_BRACKETS,
     RETIREMENT_CONTRIBUTION_PERCENTAJE,
     RETIREMENT_CONTRIBUTION_CAP,

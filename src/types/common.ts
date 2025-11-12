@@ -1,0 +1,1 @@
+export type TaxRegime = 'IRPF' | 'IRAE'
