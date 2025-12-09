@@ -128,4 +128,7 @@ export interface TaxCalculationResult {
 
     /** Final IRPF amount to be paid */
     irpfTotal: number;
+
+    /** Employer retirement contribution amount */
+    employerRetirementContribution: number;
 }

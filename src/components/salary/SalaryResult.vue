@@ -1,5 +1,11 @@
 <template>
-    <div class="p-6 space-y-10">
+    <div id="salary-result" class="p-6 space-y-10 relative">
+        <div class="absolute top-4 right-4">
+            <Button @click="print"
+                class="print:hidden ">
+                Imprimir
+            </Button>
+        </div>
         <div>
             <h2 class="text-xl font-semibold">Detalle del salario</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 border p-4 rounded-lg bg-white shadow-sm">
@@ -43,6 +49,18 @@
                 <div class="col-span-1 md:col-span-2 border-t pt-4 flex justify-between font-semibold text-base">
                     <span>Salario líquido</span>
                     <span>{{ formatCurrency(result.netSalary) }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-semibold">Aportes patronales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 border p-4 rounded-lg bg-white shadow-sm">
+                <div>
+                    <div class="flex justify-between text-sm">
+                        <span>Aporte jubilatorio patronal (7.5%)</span>
+                        <span>{{ formatCurrency(result.employerRetirementContribution) }}</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,6 +113,7 @@
 
 <script lang="ts" setup>
 import type { TaxCalculationResult } from '@/types/salary';
+import { Button } from '@/components/ui/button'
 
 defineProps<{ result: TaxCalculationResult }>();
 
@@ -103,4 +122,37 @@ const formatCurrency = (value: number) =>
         style: 'currency',
         currency: 'UYU',
     }).format(value);
+
+const print = () => {
+    window.print();
+};
 </script>
+
+<style>
+@media print {
+    body, html {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #salary-result,
+    #salary-result * {
+        visibility: visible;
+    }
+
+    #salary-result {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .no-print {
+        display: none;
+    }
+}
+</style>

@@ -174,6 +174,8 @@ const calculateTaxes = (
     const netSalary =
         grossSalary - retirement - health - trainingFund - total;
 
+    const employerRetirementContribution = retirement / 2;
+
     return {
         grossSalary: grossSalary,
         netSalary: +netSalary.toFixed(2),
@@ -186,6 +188,7 @@ const calculateTaxes = (
             deductionRate: details.deductionRate,
         },
         irpfTotal: +total.toFixed(2),
+        employerRetirementContribution: +employerRetirementContribution.toFixed(2),
     };
 };
 
