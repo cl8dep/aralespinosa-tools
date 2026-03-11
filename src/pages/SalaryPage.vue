@@ -7,7 +7,7 @@
 
         <div class="text-center border-b border-gray-200 pb-6">
             <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-                Calculadora de Salario Líquido - Uruguay <span class="text-blue-600">2025</span>
+                Calculadora de Salario Líquido - Uruguay <span class="text-blue-600">2026</span>
             </h1>
             <p class="mt-2 text-gray-600 text-base max-w-2xl mx-auto">
                 Calculá tu salario líquido luego de impuestos y aportes sociales.

@@ -4,6 +4,7 @@ import SalaryPage from '@/pages/SalaryPage.vue'
 import IrpfCreditForRentPage from '@/pages/IrpfCreditForRentPage.vue'
 import FonasaPage from '@/pages/FonasaPage.vue'
 import SalaryDataPage from '@/pages/SalaryDataPage.vue'
+import IvaMinimumPage from '@/pages/IvaMinimumPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/salary-data',
       name: 'salary-data',
       component: SalaryDataPage,
+    },
+    {
+      path: '/iva-minimum',
+      name: 'iva-minimum',
+      component: IvaMinimumPage,
     },
   ],
 })

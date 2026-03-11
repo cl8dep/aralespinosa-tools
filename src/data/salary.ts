@@ -1,8 +1,17 @@
 /**
- * BPC value for 2025.
+ * BPC value for 2026.
  */
-const BPC = 6576;
-const CPE = 4828;
+const BPC = 6864;
+
+/**
+ * BFC (Base Ficta de Contribución) value for 2026.
+ */
+const BFC = 1847.96;
+
+/**
+ * CPE (Costo Promedio Equivalente) value for 2026.
+ */
+const CPE = 6693;
 
 /**
  * IRPF tax brackets.
@@ -31,7 +40,7 @@ const RETIREMENT_CONTRIBUTION_PERCENTAJE = 15;
 /**
  * Maximum nominal salary amount subject to retirement contributions.
  */
-const RETIREMENT_CONTRIBUTION_CAP = 272564;
+const RETIREMENT_CONTRIBUTION_CAP = 288836;
 
 /**
  * FONASA contribution rates for income up to 2.5 BPC.
@@ -51,7 +60,7 @@ const FRL_CONTRIBUTION = 0.1;
 /**
  * AFAP contribution cap.
  */
-const AFAP_CAP = 272564;
+const AFAP_CAP = 288836;
 
 /**
  * Additional percentage applied to taxable income if it exceeds 10 BPC.
@@ -85,6 +94,7 @@ const EXTRA_SOLIDARITY_CONTRIBUTION = ((5 / 4) * BPC) / 12;
 
 export {
     BPC,
+    BFC,
     CPE,
     IRPF_BRACKETS,
     RETIREMENT_CONTRIBUTION_PERCENTAJE,

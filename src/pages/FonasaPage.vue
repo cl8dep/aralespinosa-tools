@@ -151,7 +151,7 @@ defineExpose({ fmt, result, resultSection, form, onSubmit })
 
         <div class="text-center border-b border-gray-200 pb-6">
             <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-                Calculadora de FONASA - Uruguay <span class="text-blue-600">2025</span>
+                Calculadora de FONASA - Uruguay <span class="text-blue-600">2026</span>
             </h1>
             <p class="mt-2 text-gray-600 text-base max-w-2xl mx-auto">
                 Calculá tus aportes mensuales de FONASA para trabajadores independientes.
