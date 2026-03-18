@@ -71,7 +71,15 @@ const lastUpdated = new Date(globalData.lastUpdated).toLocaleDateString('es-UY',
           </p>
         </RouterLink>
 
-        <!-- Herramienta 3 (Próximamente) -->
+        <RouterLink to="/sales-commission"
+          class="block p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md bg-white transition">
+          <h2 class="text-lg font-semibold text-gray-700 mb-1">Comisión por Venta</h2>
+          <p class="text-sm text-gray-500">
+            Calculá tu ganancia neta por venta: costo, packaging, envío, comisión de plataforma e IVA.
+          </p>
+        </RouterLink>
+
+        <!-- Herramienta (Próximamente) -->
         <div class="p-6 rounded-lg border border-gray-200 bg-gray-100 opacity-60 cursor-not-allowed">
           <h2 class="text-lg font-semibold text-gray-700 mb-1">Liquidaciones para Unipersonales</h2>
           <p class="text-sm text-gray-500">
