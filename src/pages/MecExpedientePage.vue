@@ -82,12 +82,8 @@ function onKeydown(e: KeyboardEvent) {
 
 async function compartir() {
     if (!result.value) return
-    const texto = `Expediente MEC ${result.value.Numero}
-Estado: ${result.value.Caratula}
-Asunto: ${result.value.Asunto}
-Oficina Actual: ${result.value.UnidadActual}
-Oficina Anterior: ${result.value.OficinaAnterior}`
-    await navigator.clipboard.writeText(texto)
+    const url = `${window.location.origin}/mec-expediente?query=${result.value.Numero}`
+    await navigator.clipboard.writeText(url)
     copied.value = true
     setTimeout(() => (copied.value = false), 2000)
 }
@@ -219,8 +215,8 @@ onMounted(() => {
                         <dd class="text-sm font-medium">
                             <span class="inline-flex items-center gap-1.5">
                                 <span class="w-2 h-2 rounded-full"
-                                    :class="result.Caratula === 'En Tránsito' ? 'bg-yellow-400' : 'bg-green-400'"></span>
-                                {{ result.Caratula }}
+                                    :class="result.UnidadActual === 'REGISTRO DE ESTADO CIVIL ARCHIVO NOTARIAL' ? 'bg-green-400' : 'bg-yellow-400'"></span>
+                                {{ result.UnidadActual === 'REGISTRO DE ESTADO CIVIL ARCHIVO NOTARIAL' ? 'Finalizado' : 'En proceso' }}
                             </span>
                         </dd>
                     </div>
