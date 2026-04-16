@@ -79,6 +79,22 @@ const lastUpdated = new Date(globalData.lastUpdated).toLocaleDateString('es-UY',
           </p>
         </RouterLink>
 
+        <RouterLink to="/mec-expediente"
+          class="block p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md bg-white transition">
+          <h2 class="text-lg font-semibold text-gray-700 mb-1">Expedientes MEC</h2>
+          <p class="text-sm text-gray-500">
+            Consultá el estado de un expediente del Ministerio de Educación y Cultura.
+          </p>
+        </RouterLink>
+
+        <RouterLink to="/label-generator"
+          class="block p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md bg-white transition">
+          <h2 class="text-lg font-semibold text-gray-700 mb-1">Generador de Etiquetas</h2>
+          <p class="text-sm text-gray-500">
+            Generá etiquetas de envío listas para imprimir en formato 100×150mm.
+          </p>
+        </RouterLink>
+
         <!-- Herramienta (Próximamente) -->
         <div class="p-6 rounded-lg border border-gray-200 bg-gray-100 opacity-60 cursor-not-allowed">
           <h2 class="text-lg font-semibold text-gray-700 mb-1">Liquidaciones para Unipersonales</h2>

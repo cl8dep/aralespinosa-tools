@@ -6,6 +6,8 @@ import FonasaPage from '@/pages/FonasaPage.vue'
 import SalaryDataPage from '@/pages/SalaryDataPage.vue'
 import IvaMinimumPage from '@/pages/IvaMinimumPage.vue'
 import SalesCommissionPage from '@/pages/SalesCommissionPage.vue'
+import LabelGeneratorPage from '@/pages/LabelGeneratorPage.vue'
+import MecExpedientePage from '@/pages/MecExpedientePage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,16 @@ const router = createRouter({
       path: '/sales-commission',
       name: 'sales-commission',
       component: SalesCommissionPage,
+    },
+    {
+      path: '/label-generator',
+      name: 'label-generator',
+      component: LabelGeneratorPage,
+    },
+    {
+      path: '/mec-expediente',
+      name: 'mec-expediente',
+      component: MecExpedientePage,
     },
   ],
 })

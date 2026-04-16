@@ -15,4 +15,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/api/mec': {
+        target: 'https://expediente.mec.gub.uy',
+        changeOrigin: true,
+        rewrite: (path) => {
+          const url = new URL(path, 'http://localhost')
+          const query = url.searchParams.get('query') ?? ''
+          return `/APPS/FILECENTER/CONSULTAWEB2.NSF/BuscarExpediente?OpenAgent&query=${query}`
+        },
+      },
+    },
+  },
 })
